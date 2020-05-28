@@ -1,0 +1,63 @@
+    /*
+    if (argc <= 1)
+    {
+        printf("Please specify a mode\n");
+    }
+    
+    if (strcmp(argv[1], "-A") == 0)
+    {
+        printf("This is mode A: Admin\n");
+        adminMain();
+
+        return 0;
+    }
+
+    else if (strcmp(argv[1], "-B") == 0)
+    {
+        printf("This is mode B: Customer\n");
+        customerMain();
+
+        return 0;
+    }
+
+    else
+    {
+        printf("Invalid Input");
+
+        return 1;
+    }*/
+
+    void search(){}
+/* find account
+this function returns pointer to the structure of an account with given account number */
+
+/* Account* findAccount(Account* root , char *accnum){
+	Account *temp = root;
+	while(temp != NULL){
+		if(strcmp(temp->accnum , accnum) == 0)
+		return temp;        /*check next account   */     
+		/* temp = temp->next;    
+		}
+
+		 //else not found return null    return NULL;
+
+		 //function to add a node to the account list
+		 Account* addNode(Account* root , Account* node){    
+			 if(root == NULL){        
+				 return node;    
+				 }
+
+				 else
+				 {      root->next = addNode(root->next , node);       
+				  return root;   
+				  }
+				  }
+
+				  Account* createAccount(Account* root, char* ac_num , char* acc_name){    
+					  Account* acc = malloc(sizeof(Account));   
+					  strcpy(acc->accnum , ac_num);
+					  strcpy(acc->name , acc_name);
+					  acc->bal = 0;
+					  acc->next = NULL;
+					  return addNode(root , acc);
+					  }
